@@ -30,13 +30,31 @@ class PokemonDetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        nameLbl.text = pokemon.name.capitalized
+        pokemon.downloadPokemonDetails {
+            self.updateUI()
+        }
         
     }
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    func updateUI() {
+        let img = UIImage(named: "\(pokemon.pokedexId)")
+        
+        nameLbl.text = pokemon.name.capitalized
+        mainImg.image = img
+        descriptionLbl.text = ""
+        typeLbl.text = pokemon.type
+        defenseLbl.text = pokemon.defense
+        heightLbl.text = pokemon.height
+        pokedexLbl.text = "\(pokemon.pokedexId)"
+        weightLbl.text = pokemon.weight
+        attackLbl.text = pokemon.attack
+        //evoLbl.text = "Next Evolution: \() Lvl \()"  //Next Evolution: Venusaur Lvl 32
+        currentEvoImg.image = img
+        nextEvoImg.image = UIImage(named: "\(self.pokemon.pokedexId + 1)")
     }
     
     
