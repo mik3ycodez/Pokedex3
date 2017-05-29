@@ -25,19 +25,36 @@ class PokemonDetailVC: UIViewController {
     @IBOutlet weak var currentEvoImg: UIImageView!
     @IBOutlet weak var nextEvoImg: UIImageView!
     
+    @IBOutlet weak var musicBtn: UIButton!
     var pokemon: Pokemon!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if musicPlayer.isPlaying {
+            musicBtn.alpha = 1.0
+        } else {
+            musicBtn.alpha = 0.2
+        }
+        
         pokemon.downloadPokemonDetails {
             self.updateUI()
         }
-        
     }
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func musicBtnPressed(_ sender: UIButton) {
+        if musicPlayer.isPlaying {
+            musicPlayer.pause()
+            sender.alpha = 0.2
+        } else {
+            musicPlayer.play()
+            sender.alpha = 1.0
+        }
     }
     
     func updateUI() {
@@ -45,17 +62,22 @@ class PokemonDetailVC: UIViewController {
         
         nameLbl.text = pokemon.name.capitalized
         mainImg.image = img
-        descriptionLbl.text = ""
+        descriptionLbl.text = pokemon.description
         typeLbl.text = pokemon.type
         defenseLbl.text = pokemon.defense
         heightLbl.text = pokemon.height
         pokedexLbl.text = "\(pokemon.pokedexId)"
         weightLbl.text = pokemon.weight
         attackLbl.text = pokemon.attack
-        //evoLbl.text = "Next Evolution: \() Lvl \()"  //Next Evolution: Venusaur Lvl 32
         currentEvoImg.image = img
-        nextEvoImg.image = UIImage(named: "\(self.pokemon.pokedexId + 1)")
+        if pokemon.nextEvolutionId == "" {
+            evoLbl.text = "No Evolutions"
+            nextEvoImg.isHidden = true
+        } else {
+            nextEvoImg.isHidden = false
+            nextEvoImg.image = UIImage(named: pokemon.nextEvolutionId)
+            let str = "Next Evolution: \(pokemon.nextEvolutionName) - LVL \(pokemon.nextEvolutionLevel)"
+            evoLbl.text = str
+        }
     }
-    
-    
 }

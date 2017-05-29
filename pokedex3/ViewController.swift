@@ -15,13 +15,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @IBOutlet weak var collection: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var musicBtn: UIButton!
     
-    var musicPlayer: AVAudioPlayer!
     var pokemon = [Pokemon]()
     var filteredPokemon = [Pokemon]()
     var inSearchMode = false
     
-    let audioSession = AVAudioSession.sharedInstance()
+    //var musicPlayer: AVAudioPlayer!
+    //let audioSession = AVAudioSession.sharedInstance()
     
     
     override func viewDidLoad() {
@@ -36,6 +37,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         initAudio()
         
         //self.hideKeyboard()  --- Stops segue to PokemonDetailsVC
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if musicPlayer.isPlaying {
+            musicBtn.alpha = 1.0
+        } else {
+            musicBtn.alpha = 0.2
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
