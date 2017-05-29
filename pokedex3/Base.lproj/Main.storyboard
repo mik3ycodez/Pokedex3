@@ -8,6 +8,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="PokemonSolid.ttf">
+            <string>PokemonSolidNormal</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -23,9 +28,49 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rfI-LL-Q3P">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vxe-mg-kl9">
+                                        <rect key="frame" x="376" y="27" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="tJf-9D-P3j"/>
+                                            <constraint firstAttribute="width" constant="30" id="vPp-A8-hj3"/>
+                                        </constraints>
+                                        <state key="normal" image="music"/>
+                                        <connections>
+                                            <action selector="musicBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wAv-uM-oPE"/>
+                                        </connections>
+                                    </button>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="jCF-F0-gog">
+                                        <rect key="frame" x="266" y="27" width="104" height="31"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="6Vk-gC-l6c"/>
+                                            <constraint firstAttribute="width" constant="100" id="wnn-wj-o1t"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="sliderMoved:" destination="BYZ-38-t0r" eventType="valueChanged" id="Pfo-8X-Ae1"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokedex" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDP-Tv-x5r">
+                                        <rect key="frame" x="47" y="22" width="170" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="170" id="Rgo-9Z-5u0"/>
+                                            <constraint firstAttribute="height" constant="35" id="eiM-kX-ihk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="25"/>
+                                        <color key="textColor" red="0.99213308095932007" green="0.99613398313522339" blue="0.99166744947433472" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="1" green="0.34509803921568627" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="Vxe-mg-kl9" firstAttribute="leading" secondItem="jCF-F0-gog" secondAttribute="trailing" constant="8" id="R5u-bv-mpS"/>
+                                    <constraint firstAttribute="bottom" secondItem="jCF-F0-gog" secondAttribute="bottom" constant="8" id="b3u-jx-QSb"/>
+                                    <constraint firstItem="cDP-Tv-x5r" firstAttribute="centerX" secondItem="rfI-LL-Q3P" secondAttribute="centerX" constant="-75" id="l9e-AW-gRQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="cDP-Tv-x5r" secondAttribute="bottom" constant="8" id="lcH-ir-L0F"/>
                                     <constraint firstAttribute="height" constant="65" id="pRA-xb-hyi"/>
+                                    <constraint firstAttribute="bottom" secondItem="Vxe-mg-kl9" secondAttribute="bottom" constant="8" id="paZ-n3-RvB"/>
+                                    <constraint firstAttribute="trailing" secondItem="Vxe-mg-kl9" secondAttribute="trailing" constant="8" id="scf-I5-okO"/>
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pokedexbg" translatesAutoresizingMaskIntoConstraints="NO" id="FoP-fr-c5W">
@@ -108,6 +153,7 @@
                     </view>
                     <connections>
                         <outlet property="collection" destination="WFf-II-o9J" id="hPO-kb-5JG"/>
+                        <outlet property="sliderBar" destination="jCF-F0-gog" id="bIS-7v-jzf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -117,6 +163,7 @@
     </scenes>
     <resources>
         <image name="1" width="120" height="120"/>
+        <image name="music" width="100" height="100"/>
         <image name="pokedexbg" width="1920" height="1200"/>
     </resources>
 </document>

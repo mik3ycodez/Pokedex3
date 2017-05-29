@@ -16,6 +16,9 @@
 		55D2962E1ED9FCF70099764A /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D2962D1ED9FCF70099764A /* Pokemon.swift */; };
 		55D296311EDA05AE0099764A /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D296301EDA05AE0099764A /* PokeCell.swift */; };
 		55D296331EDBC0710099764A /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D296321EDBC0710099764A /* csv.swift */; };
+		55D296361EDBC7BC0099764A /* PokemonHollow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55D296341EDBC7BC0099764A /* PokemonHollow.ttf */; };
+		55D296371EDBC7BC0099764A /* PokemonSolid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55D296351EDBC7BC0099764A /* PokemonSolid.ttf */; };
+		55D2963C1EDBCB5D0099764A /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55D2963B1EDBCB5D0099764A /* music.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		55D2962D1ED9FCF70099764A /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		55D296301EDA05AE0099764A /* PokeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeCell.swift; sourceTree = "<group>"; };
 		55D296321EDBC0710099764A /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
+		55D296341EDBC7BC0099764A /* PokemonHollow.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PokemonHollow.ttf; sourceTree = "<group>"; };
+		55D296351EDBC7BC0099764A /* PokemonSolid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PokemonSolid.ttf; sourceTree = "<group>"; };
+		55D2963B1EDBCB5D0099764A /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,14 +68,14 @@
 		55D296171ED9F64B0099764A /* pokedex3 */ = {
 			isa = PBXGroup;
 			children = (
-				55D2962F1EDA05600099764A /* View */,
 				55D2962C1ED9FCEA0099764A /* Model */,
+				55D2962F1EDA05600099764A /* View */,
+				55D296381EDBC7C30099764A /* Controller */,
+				55D296391EDBC7CA0099764A /* Resources */,
+				55D2963A1EDBC7D20099764A /* Util */,
 				55D296181ED9F64B0099764A /* AppDelegate.swift */,
-				55D2961A1ED9F64B0099764A /* ViewController.swift */,
 				55D2961C1ED9F64B0099764A /* Main.storyboard */,
 				55D2961F1ED9F64B0099764A /* Assets.xcassets */,
-				55D2962A1ED9FBEC0099764A /* pokemon.csv */,
-				55D296321EDBC0710099764A /* csv.swift */,
 				55D296211ED9F64B0099764A /* LaunchScreen.storyboard */,
 				55D296241ED9F64B0099764A /* Info.plist */,
 			);
@@ -90,6 +96,33 @@
 				55D296301EDA05AE0099764A /* PokeCell.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		55D296381EDBC7C30099764A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				55D2961A1ED9F64B0099764A /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		55D296391EDBC7CA0099764A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				55D2963B1EDBCB5D0099764A /* music.mp3 */,
+				55D2962A1ED9FBEC0099764A /* pokemon.csv */,
+				55D296341EDBC7BC0099764A /* PokemonHollow.ttf */,
+				55D296351EDBC7BC0099764A /* PokemonSolid.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		55D2963A1EDBC7D20099764A /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				55D296321EDBC0710099764A /* csv.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,7 +188,10 @@
 			files = (
 				55D296231ED9F64B0099764A /* LaunchScreen.storyboard in Resources */,
 				55D296201ED9F64B0099764A /* Assets.xcassets in Resources */,
+				55D296361EDBC7BC0099764A /* PokemonHollow.ttf in Resources */,
+				55D296371EDBC7BC0099764A /* PokemonSolid.ttf in Resources */,
 				55D2962B1ED9FBEC0099764A /* pokemon.csv in Resources */,
+				55D2963C1EDBCB5D0099764A /* music.mp3 in Resources */,
 				55D2961E1ED9F64B0099764A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
