@@ -40,17 +40,6 @@
                                             <action selector="musicBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wAv-uM-oPE"/>
                                         </connections>
                                     </button>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="jCF-F0-gog">
-                                        <rect key="frame" x="266" y="27" width="104" height="31"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="6Vk-gC-l6c"/>
-                                            <constraint firstAttribute="width" constant="100" id="wnn-wj-o1t"/>
-                                        </constraints>
-                                        <connections>
-                                            <action selector="sliderMoved:" destination="BYZ-38-t0r" eventType="valueChanged" id="Pfo-8X-Ae1"/>
-                                        </connections>
-                                    </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokedex" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDP-Tv-x5r">
                                         <rect key="frame" x="47" y="22" width="170" height="35"/>
                                         <constraints>
@@ -64,8 +53,6 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.34509803921568627" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="Vxe-mg-kl9" firstAttribute="leading" secondItem="jCF-F0-gog" secondAttribute="trailing" constant="8" id="R5u-bv-mpS"/>
-                                    <constraint firstAttribute="bottom" secondItem="jCF-F0-gog" secondAttribute="bottom" constant="8" id="b3u-jx-QSb"/>
                                     <constraint firstItem="cDP-Tv-x5r" firstAttribute="centerX" secondItem="rfI-LL-Q3P" secondAttribute="centerX" constant="-75" id="l9e-AW-gRQ"/>
                                     <constraint firstAttribute="bottom" secondItem="cDP-Tv-x5r" secondAttribute="bottom" constant="8" id="lcH-ir-L0F"/>
                                     <constraint firstAttribute="height" constant="65" id="pRA-xb-hyi"/>
@@ -153,7 +140,6 @@
                     </view>
                     <connections>
                         <outlet property="collection" destination="WFf-II-o9J" id="hPO-kb-5JG"/>
-                        <outlet property="sliderBar" destination="jCF-F0-gog" id="bIS-7v-jzf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
