@@ -1,7 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,14 +19,77 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xtP-g7-ogL">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
+                                <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="bQ6-Lj-pKa"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pokedexbg" translatesAutoresizingMaskIntoConstraints="NO" id="YYz-fU-2tA">
+                                <rect key="frame" x="0.0" y="65" width="414" height="671"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shadow" translatesAutoresizingMaskIntoConstraints="NO" id="zUY-pY-00u">
+                                <rect key="frame" x="99" y="644" width="216" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="216" id="Sq6-fL-bKG"/>
+                                    <constraint firstAttribute="height" constant="62" id="jHw-qI-flh"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shadow" translatesAutoresizingMaskIntoConstraints="NO" id="k9Z-zt-b3a">
+                                <rect key="frame" x="215" y="689" width="130" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="N5A-AY-Knj"/>
+                                    <constraint firstAttribute="height" constant="47" id="dQY-XP-6qz"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="masterball" translatesAutoresizingMaskIntoConstraints="NO" id="xAN-8v-j03">
+                                <rect key="frame" x="82" y="386" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="7Zv-UH-bcz"/>
+                                    <constraint firstAttribute="width" constant="250" id="sCf-dd-bcP"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pikachu" translatesAutoresizingMaskIntoConstraints="NO" id="m5Z-HF-RAD">
+                                <rect key="frame" x="166" y="509" width="228" height="207"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="228" id="11F-HJ-l52"/>
+                                    <constraint firstAttribute="height" constant="207" id="BSZ-rY-HUm"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="xtP-g7-ogL" secondAttribute="trailing" id="6Yd-4n-csl"/>
+                            <constraint firstAttribute="trailing" secondItem="YYz-fU-2tA" secondAttribute="trailing" id="Anx-Qe-6TE"/>
+                            <constraint firstItem="xtP-g7-ogL" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Dd7-6o-T1I"/>
+                            <constraint firstItem="xtP-g7-ogL" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="HGD-Yn-aYg"/>
+                            <constraint firstItem="YYz-fU-2tA" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Q6G-88-H5u"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="k9Z-zt-b3a" secondAttribute="bottom" id="QYc-Vb-1lr"/>
+                            <constraint firstItem="m5Z-HF-RAD" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailingMargin" id="Qjy-0n-QMi"/>
+                            <constraint firstItem="zUY-pY-00u" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Y0i-nK-3mS"/>
+                            <constraint firstItem="xAN-8v-j03" firstAttribute="top" secondItem="xtP-g7-ogL" secondAttribute="bottom" constant="321" id="YlT-ra-ohA"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="m5Z-HF-RAD" secondAttribute="bottom" constant="20" id="Zxl-Dk-sa4"/>
+                            <constraint firstAttribute="trailing" secondItem="k9Z-zt-b3a" secondAttribute="trailing" constant="69" id="dPk-R9-V8E"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="YYz-fU-2tA" secondAttribute="bottom" id="kI0-nU-fKD"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="zUY-pY-00u" secondAttribute="bottom" constant="30" id="p3B-hl-9dA"/>
+                            <constraint firstItem="YYz-fU-2tA" firstAttribute="top" secondItem="xtP-g7-ogL" secondAttribute="bottom" id="snh-WY-Rsf"/>
+                            <constraint firstItem="xAN-8v-j03" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="tNc-tP-f0A"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="50.724637681159422" y="374.18478260869568"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="masterball" width="482" height="478"/>
+        <image name="pikachu" width="539" height="480"/>
+        <image name="pokedexbg" width="1920" height="1200"/>
+        <image name="shadow" width="432" height="98"/>
+    </resources>
 </document>
